@@ -1,3 +1,5 @@
 ﻿  OpenGLCourseApp.cpp
-D:\OpenGLCourse\OpenGLCourseApp\OpenGLCourseApp\OpenGLCourseApp.cpp(98,39): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
+D:\OpenGLCourse\OpenGLCourseApp\OpenGLCourseApp\Window.h(17,36): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\OpenGLCourse\OpenGLCourseApp\OpenGLCourseApp\Window.h(19,37): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   OpenGLCourseApp.vcxproj -> D:\OpenGLCourse\OpenGLCourseApp\x64\Debug\OpenGLCourseApp.exe
