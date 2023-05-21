@@ -76,12 +76,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLEW/include;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLFW/include;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GLEWDIR)/include;$(GLFWDIR)/include;$(GLMDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLEW/lib/Release/x64;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLFW/lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(GLEWDIR)/lib/Release/x64;$(GLFWDIR)/lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>OpenGL32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -93,14 +93,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLEW/include;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLFW/include;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GLEWDIR)/include;$(GLFWDIR)/include;$(GLMDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLEW/lib/Release/x64;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLFW/lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(GLEWDIR)/lib/Release/x64;$(GLFWDIR)/lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>OpenGL32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -110,12 +110,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLEW/include;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLFW/include;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GLEWDIR)/include;$(GLFWDIR)/include;$(GLMDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLEW/lib/Release/x64;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLFW/lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(GLEWDIR)/lib/Release/x64;$(GLFWDIR)/lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>OpenGL32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -127,14 +127,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLEW/include;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLFW/include;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GLEWDIR)/include;$(GLFWDIR)/include;$(GLMDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLEW/lib/Release/x64;C:/Users/Philip/Documents/Visual Studio 2022/External Libs/GLFW/lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(GLEWDIR)/lib/Release/x64;$(GLFWDIR)/lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>OpenGL32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
