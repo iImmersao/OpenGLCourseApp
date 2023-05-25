@@ -1,1 +1,7 @@
-﻿  OpenGLCourseApp.vcxproj -> D:\OpenGLCourse\OpenGLCourseApp\x64\Debug\OpenGLCourseApp.exe
+﻿  OpenGLCourseApp.cpp
+D:\OpenGLCourse\OpenGLCourseApp\OpenGLCourseApp\Window.h(17,36): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\OpenGLCourse\OpenGLCourseApp\OpenGLCourseApp\Window.h(19,37): warning C4244: 'return': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\OpenGLCourse\OpenGLCourseApp\OpenGLCourseApp\OpenGLCourseApp.cpp(103,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  Texture.cpp
+  Generating Code...
+  OpenGLCourseApp.vcxproj -> D:\OpenGLCourse\OpenGLCourseApp\x64\Debug\OpenGLCourseApp.exe
