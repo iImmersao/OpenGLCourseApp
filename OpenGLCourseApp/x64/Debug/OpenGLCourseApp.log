@@ -1,3 +1,4 @@
 ﻿  OpenGLCourseApp.cpp
-D:\OpenGLCourse\OpenGLCourseApp\OpenGLCourseApp\OpenGLCourseApp.cpp(203,49): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+D:\OpenGLCourse\OpenGLCourseApp\OpenGLCourseApp\OpenGLCourseApp.cpp(222,49): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   OpenGLCourseApp.vcxproj -> D:\OpenGLCourse\OpenGLCourseApp\x64\Debug\OpenGLCourseApp.exe

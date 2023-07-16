@@ -10,7 +10,8 @@ public:
 	Texture();
 	Texture(const char* fileLoc);
 
-	void LoadTexture();
+	bool LoadTexture();
+	bool LoadTextureA(); // For loading images with an Alpha channel
 	void UseTexture();
 	void ClearTexture();
 
