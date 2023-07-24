@@ -56,6 +56,9 @@ Material dullMaterial;
 Model xwing;
 Model blackhawk;
 Model tooth30;
+Model sphere;
+Model eyeball;
+Model airliner;
 
 DirectionalLight mainLight;
 PointLight pointLights[MAX_POINT_LIGHTS];
@@ -165,15 +168,35 @@ int main() {
     dullMaterial = Material(0.3f, 4);
 
     /*
-    */
     xwing = Model();
     xwing.LoadModel("Models/x-wing.obj");
+    */
 
+    /*
     blackhawk = Model();
     blackhawk.LoadModel("Models/uh60.obj");
+    */
 
+    /*
+    */
     tooth30 = Model();
     tooth30.LoadModel("Models/Lower_Right_First_Molar_30_Enamel.obj");
+
+    /*
+    sphere = Model();
+    sphere.LoadModel("Models/sphere5.obj");
+    */
+
+    /*
+    eyeball = Model();
+    eyeball.LoadModel("Models/eyeball.obj");
+    */
+
+    /*
+    airliner = Model();
+    airliner.LoadModel("Models/11803_Airplane_v1_l1.obj");
+    */
+
 
     mainLight = DirectionalLight(1.0f, 1.0f, 1.0f,
                                 0.2f, 0.4f,
@@ -276,7 +299,6 @@ int main() {
         meshList[2]->RenderMesh();
 
         /*
-        */
         model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(-7.0f, 0.0f, 10.0f));
         model = glm::scale(model, glm::vec3(0.006f, 0.006f, 0.006f));
@@ -284,7 +306,9 @@ int main() {
         dirtTexture.UseTexture();
         shinyMaterial.UseMaterial(uniformSpecaularIntensity, uniformShininess);
         xwing.RenderModel();
+        */
 
+        /*
         model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(-3.0f, 2.0f, 0.0f));
         model = glm::rotate(model, -90.0f * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
@@ -293,7 +317,10 @@ int main() {
         dirtTexture.UseTexture();
         shinyMaterial.UseMaterial(uniformSpecaularIntensity, uniformShininess);
         blackhawk.RenderModel();
+        */
 
+        /*
+        */
         model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(-10.0f, 2.0f, 10.0f));
         model = glm::rotate(model, -90.0f * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
@@ -302,6 +329,37 @@ int main() {
         dirtTexture.UseTexture();
         shinyMaterial.UseMaterial(uniformSpecaularIntensity, uniformShininess);
         tooth30.RenderModel();
+
+        /*
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-5.0f, 2.0f, 5.0f));
+        //model = glm::scale(model, glm::vec3(10.0f, 10.0f, 10.0f));
+        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+        dirtTexture.UseTexture();
+        shinyMaterial.UseMaterial(uniformSpecaularIntensity, uniformShininess);
+        sphere.RenderModel();
+        */
+
+        /*
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-5.0f, 2.0f, 5.0f));
+        //model = glm::scale(model, glm::vec3(10.0f, 10.0f, 10.0f));
+        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+        dirtTexture.UseTexture();
+        shinyMaterial.UseMaterial(uniformSpecaularIntensity, uniformShininess);
+        eyeball.RenderModel();
+        */
+
+        /*
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-5.0f, 5.0f, 5.0f));
+        model = glm::rotate(model, -90.0f * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(0.01f, 0.01f, 0.01f));
+        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+        dirtTexture.UseTexture();
+        shinyMaterial.UseMaterial(uniformSpecaularIntensity, uniformShininess);
+        airliner.RenderModel();
+        */
 
         glUseProgram(0);
 

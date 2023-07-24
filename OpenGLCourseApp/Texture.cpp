@@ -1,3 +1,5 @@
+#include <string.h>
+
 #include "Texture.h"
 
 Texture::Texture() {
@@ -22,6 +24,8 @@ bool Texture::LoadTexture() {
 		printf("Failed to find: %s\n", fileLocation);
 		return false;
 	}
+	printf("Texture width = %d height = %d\n", width, height);
+	printf("Texture data # bytes = %d", strlen((const char *)texData));
 
 	glGenTextures(1, &textureID);
 	glBindTexture(GL_TEXTURE_2D, textureID);

@@ -11,10 +11,14 @@ public:
 	void RenderMesh();
 	void ClearMesh();
 
+	GLsizei getIndexCount();
+	GLsizei getVertexCount();
+
 	~Mesh();
 
 private:
 	GLuint VAO, VBO, IBO;
 	GLsizei indexCount;
+	GLsizei vertexCount;
 };
 

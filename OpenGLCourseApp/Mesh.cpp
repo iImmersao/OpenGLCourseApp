@@ -1,3 +1,7 @@
+#include <iostream>
+#include <fstream>
+#include <stdio.h>
+
 #include "Mesh.h"
 
 Mesh::Mesh() {
@@ -5,10 +9,34 @@ Mesh::Mesh() {
 	VBO = 0;
 	IBO = 0;
 	indexCount = 0;
+    vertexCount = 0;
+}
+
+void outputMesh(GLfloat* vertices, unsigned int* indices, unsigned int numOfVertices, unsigned int numOfIndices) {
+    char buf[1024];
+    std::ofstream meshFile;
+    meshFile.open("D:\\tmp\\mesh_cpp.txt");
+    meshFile << "Vertices...\n";
+    GLfloat* vtxPtr = vertices;
+    for (unsigned int i = 0; i < numOfVertices; i += 8) {
+        sprintf_s(buf, "%.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f\n", *vtxPtr, *(vtxPtr + 1), *(vtxPtr + 2), *(vtxPtr + 3), *(vtxPtr + 4), *(vtxPtr + 5), *(vtxPtr + 6), *(vtxPtr + 7));
+        meshFile << buf;
+        vtxPtr += 8;
+    }
+    meshFile << "Indices...\n";
+    unsigned int* idxPtr = indices;
+    for (unsigned int i = 0; i < numOfIndices; i += 3) {
+        sprintf_s(buf, "%d, %d, %d\n", *idxPtr, *(idxPtr + 1), *(idxPtr + 2));
+        meshFile << buf;
+        idxPtr += 3;
+    }
+    meshFile.close();
 }
 
 void Mesh::CreateMesh(GLfloat* vertices, unsigned int* indices, unsigned int numOfVertices, unsigned int numOfIndices) {
 	indexCount = numOfIndices;
+    vertexCount = numOfVertices;
+    printf("Mesh has %d indices\n", numOfIndices);
 
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
@@ -32,6 +60,8 @@ void Mesh::CreateMesh(GLfloat* vertices, unsigned int* indices, unsigned int num
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
     glBindVertexArray(0);
+
+    outputMesh(vertices, indices, numOfVertices, numOfIndices);
 }
 
 void Mesh::RenderMesh() {
@@ -59,6 +89,14 @@ void Mesh::ClearMesh() {
     }
 
     indexCount = 0;
+}
+
+GLsizei Mesh::getIndexCount() {
+    return indexCount;
+}
+
+GLsizei Mesh::getVertexCount() {
+    return vertexCount;
 }
 
 Mesh::~Mesh() {
