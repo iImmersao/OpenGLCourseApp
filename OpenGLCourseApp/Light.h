@@ -10,7 +10,7 @@ class Light
 {
 public:
 	Light();
-	Light(GLfloat shadowWidth, GLfloat shadowHeight,
+	Light(GLuint shadowWidth, GLuint shadowHeight,
 		GLfloat red, GLfloat green, GLfloat blue,
 		GLfloat ambientIntensity, GLfloat dIntensity);
 

@@ -1,3 +1,2 @@
-﻿  OpenGLCourseApp.cpp
-D:\OpenGLCourse\OpenGLCourseApp\OpenGLCourseApp\OpenGLCourseApp.cpp(414,49): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+﻿  Texture.cpp
   OpenGLCourseApp.vcxproj -> D:\OpenGLCourse\OpenGLCourseApp\x64\Debug\OpenGLCourseApp.exe

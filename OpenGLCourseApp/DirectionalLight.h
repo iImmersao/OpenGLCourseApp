@@ -6,7 +6,7 @@ class DirectionalLight :
 public:
     DirectionalLight();
 
-    DirectionalLight(GLfloat shadowWidth, GLfloat shadowHeight,
+    DirectionalLight(GLuint shadowWidth, GLuint shadowHeight,
         GLfloat red, GLfloat green, GLfloat blue,
         GLfloat ambientIntensity, GLfloat dIntensity,
         GLfloat xDir, GLfloat yDir, GLfloat zDir);

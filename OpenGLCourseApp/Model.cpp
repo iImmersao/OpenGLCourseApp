@@ -54,7 +54,7 @@ Model::~Model() {
 }
 
 void Model::LoadNode(aiNode * node, const aiScene * scene) {
-	printf("Processing node %s\n", node->mName.C_Str());
+	//printf("Processing node %s\n", node->mName.C_Str());
 	for (size_t i = 0; i < node->mNumMeshes; i++) {
 		LoadMesh(scene->mMeshes[node->mMeshes[i]], scene);
 	}
@@ -67,7 +67,7 @@ void Model::LoadNode(aiNode * node, const aiScene * scene) {
 void Model::LoadMesh(aiMesh* mesh, const aiScene* scene) {
 	std::vector<GLfloat> vertices;
 	std::vector<unsigned int> indices;
-	printf("Processing mesh %s\n", mesh->mName.C_Str());
+	//printf("Processing mesh %s\n", mesh->mName.C_Str());
 
 	for (size_t i = 0; i < mesh->mNumVertices; i++) {
 		vertices.insert(vertices.end(), { mesh->mVertices[i].x, mesh->mVertices[i].y, mesh->mVertices[i].z });
@@ -81,7 +81,7 @@ void Model::LoadMesh(aiMesh* mesh, const aiScene* scene) {
 		vertices.insert(vertices.end(), { -mesh->mNormals[i].x, -mesh->mNormals[i].y, -mesh->mNormals[i].z }); // Normals will exist due to flag used on load.
 	}
 
-	printf("Loading mesh %s with %d faces\n", mesh->mName.C_Str(), mesh->mNumFaces);
+	//printf("Loading mesh %s with %d faces\n", mesh->mName.C_Str(), mesh->mNumFaces);
 	for (size_t i = 0; i < mesh->mNumFaces; i++) {
 		aiFace face = mesh->mFaces[i];
 		//printf("Face %d has %d indices\n", i, face.mNumIndices);
@@ -92,8 +92,8 @@ void Model::LoadMesh(aiMesh* mesh, const aiScene* scene) {
 
 	Mesh* newMesh = new Mesh();
 	newMesh->CreateMesh(&vertices[0], &indices[0], vertices.size(), indices.size());
-	printf("Adding mesh # %d\n", meshList.size());
-	printf("With %d vertices and %d indices\n", vertices.size(), indices.size());
+	//printf("Adding mesh # %d\n", meshList.size());
+	//printf("With %d vertices and %d indices\n", vertices.size(), indices.size());
 	meshList.push_back(newMesh);
 	meshToTex.push_back(mesh->mMaterialIndex);
 }
@@ -101,7 +101,7 @@ void Model::LoadMesh(aiMesh* mesh, const aiScene* scene) {
 void Model::LoadMaterials(const aiScene* scene) {
 	textureList.resize(scene->mNumMaterials);
 
-	printf("Loading %d materials\n", scene->mNumMaterials);
+	//printf("Loading %d materials\n", scene->mNumMaterials);
 
 	for (size_t i = 0; i < scene->mNumMaterials; i++) {
 		aiMaterial* material = scene->mMaterials[i];
